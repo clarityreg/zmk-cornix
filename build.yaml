@@ -9,6 +9,14 @@ include:
     shield: cornix_indicator
     artifact-name: cornix_right
 
+  # Debug build of the right half with USB logging. Flash this instead of
+  # cornix_right while chasing the half-to-half stalls, plug the right half in
+  # over USB and run ~/Development/monitor-keyboard/zmklog.sh to capture its log.
+  - board: cornix_right//zmk
+    shield: cornix_indicator
+    snippet: zmk-usb-logging
+    artifact-name: cornix_right_usblog
+
   - board: cornix_right//zmk
     shield: settings_reset
     snippet: studio-rpc-usb-uart nrf52840-nosd
