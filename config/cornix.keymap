@@ -147,13 +147,13 @@
             // Hold Lower + Raise. Bluetooth profiles, USB/BLE output, bootloader.
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 | BT3 | BT4 | BT5 |                    | OUT USB | OUT BLE | OUT TOG |     |     |        |
-            // |       |     |     |     |     |     |                    |         |         |         |     |     |        |
+            // | CLRALL|     |     |     |     |     |                    |         |         |         |     |     |        |   CLRALL = forget every BT profile
             // |       |     |     |     |     |     |  BOOT  |  |  BOOT  |         |         |         |     |     |        |
             // |       |     |     |     |     |     |        |  |        |         |         |         |     |     |        |
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                &out OUT_USB  &out OUT_BLE  &out OUT_TOG  &none  &none  &none
-&none       &none         &none         &none         &none         &none                                       &none         &none         &none         &none  &none  &none
+&bt BT_CLR_ALL  &none     &none         &none         &none         &none                                       &none         &none         &none         &none  &none  &none
 &none       &none         &none         &none         &none         &none         &bootloader    &bootloader    &none         &none         &none         &none  &none  &none
 &none       &none         &none         &trans        &none         &none                                       &none         &none         &trans        &none  &none  &none
             >;
