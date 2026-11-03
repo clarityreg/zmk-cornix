@@ -12,41 +12,43 @@ manifest:
       url-base: https://github.com/janpfischer
     - name: cormoran
       url-base: https://github.com/cormoran
+  # Every project is pinned to the exact commit the 2026-11-03 build used, so a
+  # rebuild only changes what we changed. To update: bump a SHA deliberately.
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: 4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85  # was main, pinned 2026-11-03
       clone-depth: 1
       import:
         file: app/west.yml
     - name: zmk-helpers
       remote: urob
-      revision: main
+      revision: 7bcba18fc8df27303eb92a435d33ea870cc51f98  # was main, pinned 2026-11-03
       clone-depth: 1
     - name: zmk-rgbled-widget
       remote: hitsmaxft
-      revision: main
+      revision: a2b29334b8598d7351c1f4429c5c083b2c0a3bc5  # was main, pinned 2026-11-03
       clone-depth: 1
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: main
+      revision: 2bb333f87136d33e94a49d86236ed9ec254a8060  # was main, pinned 2026-11-03
       clone-depth: 1
     # DYA Studio extensions. ZMK Studio remains enabled as the shared RPC transport.
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: main
+      revision: 57738cc4fc6ba80e82a7ac57741a0339cb186cd4  # was main, pinned 2026-11-03
       clone-depth: 1
     - name: zmk-module-battery-history
       remote: cormoran
-      revision: main
+      revision: 307755dd2ad4d320e14de162e8e5ef018f29d929  # was main, pinned 2026-11-03
       clone-depth: 1
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: main
+      revision: 78f86df9e6c5edaf57bef3ccbd7f360cfdf49291  # was main, pinned 2026-11-03
       clone-depth: 1
     - name: zmk-module-runtime-input-processor
       remote: cormoran
-      revision: main
+      revision: decf628d7ce5ed95b520c650824c28ea9de649c1  # was main, pinned 2026-11-03
       clone-depth: 1
     #- name: zmk-dongle-screen
     #  remote: janpfischer
